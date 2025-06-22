@@ -12,7 +12,7 @@ console.log(checkOddEven(5)); // ganjil
 console.log(checkOddEven(2)); // genap
 console.log(checkOddEven("enam")); // invalid input
 
-
+// SOALL SOALL 
 
 /**
  * Menentukan usia dewasa
