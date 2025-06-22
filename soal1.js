@@ -1,3 +1,6 @@
+
+console.log("Jawaban Soal 1");
+
 // Jumlahkan semua angka genap dalam array berikut
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let resultOne = 0
@@ -8,7 +11,7 @@ for(let index = 0; index < numbers.length; index++){
         resultOne += numbers[index];
     }
 }
-console.log(resultOne);
+console.log("[1]", resultOne);
 
 
 const numbersTwo = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -21,7 +24,7 @@ for(let index = 0; index < numbersTwo.length; index++){
         resultTwo += numbers[index];
     }
 }
-console.log(resultTwo);
+console.log("[2]", resultTwo);
 
 
 // Ubah semua huruf kecil dalam array menjadi huruf besar
@@ -32,7 +35,7 @@ let resultThree = []
 for (let index = 0; index < students.length; index++) {
     resultThree.push(students[index].toUpperCase())
 }
-console.log(resultThree);
+console.log("[3]", resultThree);
 
 
 
@@ -53,7 +56,7 @@ for (let index = 0; index < people.length; index++) {
     resultFour.push(people[index].name);
   }
 }
-console.log(resultFour);
+console.log("[4]", resultFour);
 
 
 // Hitung total harga semua barang
@@ -69,7 +72,7 @@ let resultFive = 0;
 for (let index = 0; index < items.length; index++) {
     resultFive += items[index].price;
 }
-console.log(resultFive);
+console.log("[5]", resultFive);
 
 
 //Ambil hanya angka unik dari array (hapus duplikat).
@@ -83,7 +86,7 @@ for (let index = 0; index < numbersThree.length; index++) {
     resultSix.push(numbersThree[index])
    }
 }
-console.log(resultSix);
+console.log("[6]", resultSix);
 
 
 
@@ -94,26 +97,60 @@ const products = [
     { name: 'Monitor', price: 3000000 },
 ];
 
+// Jawaban No. 7
+let resultSeven = products[0]
 
+for (let index = 0; index < products.length; index++) {
+    if (products.price > resultSeven.price) {
+        resultSeven = products[index]
+    }
+}
+console.log("[7]", resultSeven);
 
 
 // Buat kalimat dari array kata.
 const words = ['Belajar', 'array', 'itu', 'menyenangkan'];
 
+// Jawaban No. 8
+let resultEight = ''
+
+for (let index = 0; index < words.length; index++) {
+    if (index === 0) {
+        resultEight = words[index]
+    } else{
+        resultEight = resultEight + ' ' + words[index]
+    }
+}
+console.log("[8]", resultEight);
+
+
 
 // Ambil hanya 3 data pertama yang mengandung kata 'a' pada nama.
 const names = ['Aldo', 'Budi', 'Caca', 'Dinda', 'Eka', 'Fajar'];
 
+// Jawaban No. 9
+let resultNine = []
+for (let index = 0; index < names.length; index++) {
+    const lowerCaseName = names[index].toLowerCase(); 
+
+    if(lowerCaseName.includes("a") && resultNine.length < 3){
+        resultNine.push(names[index]);
+    }
+}
+console.log("[9]", resultNine);
+
+
 
 // Hitung total karakter dari semua nama dalam array.
 const namesTwo = ['Ani', 'Budi', 'Citra']; // 12 karakter
-let totalChars = 0;
+let resultTen = 0;
 
-for (let i = 0; i < namesTwo.length; i++) {
-    totalChars += namesTwo[i].length;
+// Jawaban No. 10
+for (let index = 0; index < namesTwo.length; index++) {
+    resultTen += namesTwo[index].length;
 }
 
-console.log(totalChars);
+console.log("[10]", resultTen);
 
 
 
@@ -124,3 +161,14 @@ const peopleTwo = [
     { name: 'Tini', age: 19 },
     { name: 'Tara', age: 25 },
 ];
+
+//Jawaban No. 11
+let resultEleven = []
+
+for (let index = 0; index < peopleTwo.length; index++) {
+    if(peopleTwo[index].age > 21){
+        resultEleven.push(`${peopleTwo[index].name} (${peopleTwo[index].age})`)
+    }
+}
+console.log("[11}", resultEleven);
+
